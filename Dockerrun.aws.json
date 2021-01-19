@@ -6,12 +6,7 @@
       "image": "cygnetops/multi-client-10-14",
       "hostname": "client",
       "essential": false,
-      "memory": 128,
-      "command": [
-        "/bin/bash",
-        "-c",
-        "systemctl start nginx || echo 'nginx started with errors'"
-      ]
+      "memory": 128
     },
     {
       "name": "server",
@@ -39,12 +34,7 @@
         }
       ],
       "links": ["client", "server"],
-      "memory": 128,
-      "command": [
-        "/bin/bash",
-        "-c",
-        "systemctl start nginx || echo 'nginx started with errors'"
-      ]
+      "memory": 128
     }
   ]
 }
