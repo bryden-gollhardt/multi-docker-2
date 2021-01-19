@@ -51,7 +51,7 @@ workflows:
       - buildProdImages
       - aws-elastic-beanstalk/deploy:
           context: aws-creds_multi-docker
-          environment-name: multi-docker-4
+          environment-name: multi-docker
           label: version-<<pipeline.number>>
           filters:
             branches:
